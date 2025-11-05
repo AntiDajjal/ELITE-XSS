@@ -1,0 +1,231 @@
+{
+  "profiles": {
+    "testphp.vulnweb.com": {
+      "name": "DVWA Test Environment",
+      "description": "Damn Vulnerable Web Application - Safe testing environment",
+      "PARALLEL_TABS": 3,
+      "TEST_DELAY": 1000,
+      "ENABLE_WAF_BYPASS": false,
+      "ENABLE_QUANTUM_BYPASS": false,
+      "ENABLE_AGGRESSIVE_TESTING": true,
+      "MAX_TESTS_PER_PARAM": 200,
+      "PREFERRED_PAYLOADS": ["basic", "advanced"],
+      "TECHNOLOGY_STACK": "php",
+      "SECURITY_LEVEL": "low",
+      "TESTING_APPROACH": "comprehensive"
+    },
+    "demo.testfire.net": {
+      "name": "IBM Testfire Banking Demo",
+      "description": "IBM Security AppScan demo application",
+      "PARALLEL_TABS": 2,
+      "TEST_DELAY": 1500,
+      "ENABLE_WAF_BYPASS": true,
+      "ENABLE_QUANTUM_BYPASS": false,
+      "MAX_TESTS_PER_PARAM": 100,
+      "PREFERRED_PAYLOADS": ["basic", "filter_bypass"],
+      "TECHNOLOGY_STACK": "jsp",
+      "SECURITY_LEVEL": "medium",
+      "TESTING_APPROACH": "careful"
+    },
+    "portswigger-labs.net": {
+      "name": "PortSwigger Web Security Academy",
+      "description": "Professional security training labs",
+      "PARALLEL_TABS": 5,
+      "TEST_DELAY": 500,
+      "ENABLE_WAF_BYPASS": true,
+      "ENABLE_QUANTUM_BYPASS": true,
+      "ENABLE_ML_PREDICTION": true,
+      "MAX_TESTS_PER_PARAM": 500,
+      "PREFERRED_PAYLOADS": ["advanced", "filter_bypass", "waf_evasion"],
+      "TECHNOLOGY_STACK": "mixed",
+      "SECURITY_LEVEL": "high",
+      "TESTING_APPROACH": "elite"
+    },
+    "localhost": {
+      "name": "Local Development Environment",
+      "description": "Local testing environment - full features enabled",
+      "PARALLEL_TABS": 10,
+      "TEST_DELAY": 200,
+      "ENABLE_WAF_BYPASS": true,
+      "ENABLE_QUANTUM_BYPASS": true,
+      "ENABLE_ALL_FEATURES": true,
+      "ENABLE_NEURAL_FUZZING": true,
+      "ENABLE_ML_PREDICTION": true,
+      "MAX_TESTS_PER_PARAM": 1000,
+      "PREFERRED_PAYLOADS": ["all"],
+      "TECHNOLOGY_STACK": "unknown",
+      "SECURITY_LEVEL": "variable",
+      "TESTING_APPROACH": "development"
+    },
+    "127.0.0.1": {
+      "name": "Local IP Testing",
+      "description": "Direct IP access for local applications",
+      "PARALLEL_TABS": 8,
+      "TEST_DELAY": 300,
+      "ENABLE_ALL_FEATURES": true,
+      "MAX_TESTS_PER_PARAM": 800,
+      "PREFERRED_PAYLOADS": ["basic", "advanced", "experimental"],
+      "TECHNOLOGY_STACK": "unknown",
+      "SECURITY_LEVEL": "low",
+      "TESTING_APPROACH": "thorough"
+    },
+    "hackerone.com": {
+      "name": "HackerOne Bug Bounty Platform",
+      "description": "Bug bounty testing environment",
+      "PARALLEL_TABS": 2,
+      "TEST_DELAY": 2000,
+      "ENABLE_STEALTH_MODE": true,
+      "ENABLE_WAF_BYPASS": true,
+      "MAX_TESTS_PER_PARAM": 50,
+      "PREFERRED_PAYLOADS": ["basic", "encoding_bypass"],
+      "TECHNOLOGY_STACK": "ruby",
+      "SECURITY_LEVEL": "very_high",
+      "TESTING_APPROACH": "stealth",
+      "RATE_LIMIT_RESPECT": true,
+      "USER_AGENT_ROTATION": true
+    },
+    "bugcrowd.com": {
+      "name": "Bugcrowd Bug Bounty Platform", 
+      "description": "Professional bug bounty environment",
+      "PARALLEL_TABS": 2,
+      "TEST_DELAY": 2000,
+      "ENABLE_STEALTH_MODE": true,
+      "ENABLE_WAF_BYPASS": true,
+      "MAX_TESTS_PER_PARAM": 50,
+      "PREFERRED_PAYLOADS": ["basic", "context_specific"],
+      "TECHNOLOGY_STACK": "python",
+      "SECURITY_LEVEL": "very_high", 
+      "TESTING_APPROACH": "stealth"
+    },
+    "hackthebox.eu": {
+      "name": "Hack The Box Training Platform",
+      "description": "Cybersecurity training and challenges",
+      "PARALLEL_TABS": 4,
+      "TEST_DELAY": 800,
+      "ENABLE_QUANTUM_BYPASS": true,
+      "ENABLE_ADVANCED_TECHNIQUES": true,
+      "MAX_TESTS_PER_PARAM": 300,
+      "PREFERRED_PAYLOADS": ["advanced", "experimental", "2025_cutting_edge"],
+      "TECHNOLOGY_STACK": "mixed",
+      "SECURITY_LEVEL": "high",
+      "TESTING_APPROACH": "challenge"
+    },
+    "tryhackme.com": {
+      "name": "TryHackMe Learning Platform",
+      "description": "Cybersecurity education platform",
+      "PARALLEL_TABS": 3,
+      "TEST_DELAY": 1000,
+      "ENABLE_EDUCATIONAL_MODE": true,
+      "MAX_TESTS_PER_PARAM": 150,
+      "PREFERRED_PAYLOADS": ["basic", "technology_specific"],
+      "TECHNOLOGY_STACK": "mixed",
+      "SECURITY_LEVEL": "educational",
+      "TESTING_APPROACH": "learning"
+    },
+    "pentesterlab.com": {
+      "name": "PentesterLab Training",
+      "description": "Hands-on penetration testing training",
+      "PARALLEL_TABS": 4,
+      "TEST_DELAY": 600,
+      "ENABLE_COMPREHENSIVE_TESTING": true,
+      "MAX_TESTS_PER_PARAM": 400,
+      "PREFERRED_PAYLOADS": ["basic", "advanced", "filter_bypass"],
+      "TECHNOLOGY_STACK": "php",
+      "SECURITY_LEVEL": "training",
+      "TESTING_APPROACH": "educational"
+    }
+  },
+  "global_defaults": {
+    "ENABLE_SAFETY_CHECKS": true,
+    "RESPECT_ROBOTS_TXT": true,
+    "MAX_CONCURRENT_REQUESTS": 10,
+    "REQUEST_TIMEOUT": 15000,
+    "ENABLE_LOGGING": true,
+    "AUTO_EXPORT_RESULTS": true,
+    "ENABLE_SCREENSHOT_CAPTURE": false,
+    "PRIVACY_MODE": true
+  },
+  "security_frameworks": {
+    "owasp_top_10": {
+      "A03_injection": {
+        "focus_areas": ["XSS", "SQL injection", "Command injection"],
+        "test_intensity": "high",
+        "payload_categories": ["basic", "advanced", "encoding_bypass"]
+      },
+      "A05_security_misconfiguration": {
+        "focus_areas": ["Error handling", "Debug information"],
+        "test_intensity": "medium",
+        "payload_categories": ["basic"]
+      }
+    },
+    "sans_top_25": {
+      "CWE_79": {
+        "name": "Cross-site Scripting",
+        "priority": "critical",
+        "payload_categories": ["all"]
+      }
+    }
+  },
+  "compliance_settings": {
+    "pci_dss": {
+      "enable_for_payment_sites": true,
+      "additional_checks": ["SSL verification", "Input validation"],
+      "reporting_requirements": ["detailed", "timestamped"]
+    },
+    "gdpr": {
+      "data_minimization": true,
+      "consent_tracking": false,
+      "data_retention_days": 30
+    },
+    "hipaa": {
+      "enhanced_logging": true,
+      "audit_trail": true,
+      "encryption_checks": true
+    }
+  },
+  "technology_detection": {
+    "frameworks": {
+      "angular": {
+        "detection_payloads": ["{{7*7}}", "{{constructor.constructor}}"],
+        "specific_tests": ["template_injection", "expression_injection"]
+      },
+      "react": {
+        "detection_payloads": ["dangerouslySetInnerHTML", "jsx_injection"],
+        "specific_tests": ["component_injection", "props_manipulation"]
+      },
+      "vue": {
+        "detection_payloads": ["v-html", "{{$el}}"],
+        "specific_tests": ["template_injection", "directive_abuse"]
+      }
+    },
+    "cms_platforms": {
+      "wordpress": {
+        "common_parameters": ["s", "cat", "tag", "author"],
+        "plugin_tests": true,
+        "theme_tests": true
+      },
+      "drupal": {
+        "common_parameters": ["search", "node", "taxonomy"],
+        "module_tests": true
+      },
+      "joomla": {
+        "common_parameters": ["search", "catid", "id"],
+        "component_tests": true
+      }
+    }
+  },
+  "metadata": {
+    "version": "6.0.0",
+    "created": "2025-01-01",
+    "profiles_count": 10,
+    "last_validation": "2025-01-01",
+    "compatibility": "Elite Framework v6.0+",
+    "notes": [
+      "Profiles are automatically applied based on target domain",
+      "Settings can be overridden in framework_config.json",
+      "Security levels: low, medium, high, very_high, educational, training",
+      "Testing approaches: comprehensive, careful, elite, stealth, learning",
+      "Always verify you have permission before testing any target"
+    ]
+  }
+}

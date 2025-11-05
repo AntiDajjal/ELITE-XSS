@@ -1,0 +1,59 @@
+{
+  "framework": {
+    "PARALLEL_TABS": 8,
+    "TEST_DELAY": 800,
+    "ENABLE_QUANTUM_BYPASS": true,
+    "ENABLE_ML_PREDICTION": true,
+    "ENABLE_WAF_BYPASS": true,
+    "ENABLE_NEURAL_FUZZING": true,
+    "ENABLE_BLOCKCHAIN_BYPASS": true,
+    "ENABLE_IOT_VECTORS": true,
+    "ENABLE_VOICE_INJECTION": true,
+    "ENABLE_AR_VR_BYPASS": true,
+    "MAX_TESTS_PER_PARAM": 500,
+    "LOG_LEVEL": "INFO",
+    "STOP_ON_SUCCESS": false,
+    "MAX_SUCCESS_BEFORE_STOP": 10,
+    "ADAPTIVE_TAB_COUNT": true,
+    "ENABLE_SMART_SCHEDULING": true,
+    "ENABLE_WORK_STEALING": true,
+    "ENABLE_ADVANCED_REPORTING": true
+  },
+  "user_preferences": {
+    "theme": "quantum",
+    "auto_export": true,
+    "notification_level": "important",
+    "dashboard_position": "top-right",
+    "show_progress_animations": true,
+    "enable_sound_notifications": false,
+    "auto_minimize_dashboard": false,
+    "preferred_report_format": "both",
+    "save_session_data": true
+  },
+  "security": {
+    "require_confirmation_for_aggressive_testing": true,
+    "respect_rate_limits": true,
+    "enable_stealth_mode": false,
+    "max_requests_per_minute": 100,
+    "enable_proxy_rotation": false,
+    "user_agent_rotation": true
+  },
+  "ml_settings": {
+    "learning_rate": 0.001,
+    "confidence_threshold": 0.7,
+    "enable_pattern_recognition": true,
+    "enable_anomaly_detection": true,
+    "auto_retrain_models": true,
+    "save_training_data": true,
+    "max_training_samples": 50000
+  },
+  "reporting": {
+    "include_screenshots": false,
+    "include_response_headers": true,
+    "include_timing_data": true,
+    "include_ml_insights": true,
+    "compliance_frameworks": ["OWASP", "NIST"],
+    "risk_scoring_method": "cvss",
+    "auto_categorize_findings": true
+  }
+}

