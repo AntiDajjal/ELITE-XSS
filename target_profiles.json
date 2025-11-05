@@ -133,6 +133,25 @@
       "TECHNOLOGY_STACK": "php",
       "SECURITY_LEVEL": "training",
       "TESTING_APPROACH": "educational"
+    },
+    "xss.benstafford.dev": {
+      "name": "Ben Stafford XSS Testing Lab",
+      "description": "XSS testing laboratory - attack1.html endpoint",
+      "PARALLEL_TABS": 5,
+      "TEST_DELAY": 700,
+      "ENABLE_WAF_BYPASS": true,
+      "ENABLE_QUANTUM_BYPASS": true,
+      "ENABLE_ML_PREDICTION": true,
+      "MAX_TESTS_PER_PARAM": 300,
+      "PREFERRED_PAYLOADS": ["basic", "advanced", "encoding_bypass", "polyglot"],
+      "TECHNOLOGY_STACK": "html",
+      "SECURITY_LEVEL": "medium",
+      "TESTING_APPROACH": "xss_focused",
+      "ENDPOINT": "/attack1.html",
+      "PARAMETERS": ["username"],
+      "CONTEXT_DETECTION": ["html_attribute", "html_body", "javascript_context"],
+      "XSS_TYPE_FOCUS": ["reflected_xss", "stored_xss", "dom_xss"],
+      "REPORTING_LEVEL": "detailed"
     }
   },
   "global_defaults": {
